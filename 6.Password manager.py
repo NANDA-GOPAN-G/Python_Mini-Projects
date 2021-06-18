@@ -6,8 +6,11 @@ key + password + text to encrypt = encrypted text
 random text + key + password = text to encrypt
 '''
 
+# also used the files key.key and password.txt which are in this repository.
+
 """
 # used to create the key file.
+# only need to use it once for key creation.
 def write_key():
     key  =  Fernet.generate_key()
     with open("key.key","wb") as key_file:

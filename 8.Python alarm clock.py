@@ -1,8 +1,12 @@
+"""
+This code includes a module called datetime which was installed using 'pip install datetime' command;
+and a librabry called playsound installed using 'pip install playsound' command, for playing the alarm sound at the time of alarm set by user.
+"""
 from datetime import datetime
 from playsound import playsound
 
 confirm = input("Do you wish to set up an alarm(yes/no)? ").lower()
-if confirm == "no":
+if confirm == "no" or (confirm != "yes" and confirm != "no"):
     quit()
 
 print("Enter the time for the alarm to be set:(HH:MM:SS:PP)")
@@ -25,6 +29,6 @@ while True:
         if alarm_hour == current_hour:
             if alarm_minute == current_minute:
                 if alarm_second == current_second:
-                    print("Wake up!")
-                    playsound('C:\Riseandshine\SlowMorning.mp3')
+                    print("Wake up!")      #can add any message needed to be printed at alarm time.
+                    playsound('C:\Riseandshine\SlowMorning.mp3')   # use the path of the song u wish to play as the alarm song placed in single quotes.
                     break
